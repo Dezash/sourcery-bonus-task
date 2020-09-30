@@ -17,7 +17,7 @@ public class DatePrinter
 
             if (month >= 1 && month <= 12 && day >= 1 && day <= daysInMonth[month - 1])
             {
-                if (month == 2 && day > 28 && java.time.Year.of(i).isLeap())
+                if (month == 2 && day > 28 && !java.time.Year.of(i).isLeap())
                     continue;
 
                 cal.set(i, month - 1, day, 0, 0);
